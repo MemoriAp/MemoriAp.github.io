@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inventory App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lishith’s App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <button data-tab="home">Home</button>
-    <button data-tab="add">Add Item</button>
-    <button data-tab="settings">Settings</button>
-    <button data-tab="about">About</button>
-  </nav>
+  <header>
+    <h1>Lishith’s Organizer</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="add">Add Item</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+      <button class="tab-btn" data-tab="about">About</button>
+    </nav>
+  </header>
 
+  <!-- Status Message -->
+  <div id="status-message"></div>
+
+  <!-- Tabs -->
   <main>
-    <section id="home" class="tab active">
-      <h1>Items</h1>
-      <div id="itemsList"></div>
+    <!-- Home -->
+    <section id="home" class="tab-content active">
+      <h2>Items List</h2>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by name...">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="Room">Room</option>
+          <option value="Kitchen">Kitchen</option>
+          <option value="Books">Books</option>
+        </select>
+      </div>
+      <div id="items-list"></div>
     </section>
 
-    <section id="add" class="tab">
-      <h1>Add New Item</h1>
-      <div class="form-container">
-        <input type="file" id="itemImage" accept="image/*" />
-        <input type="text" id="itemName" placeholder="Name" />
-        <input type="text" id="itemLocation" placeholder="Where it's kept" />
-        <textarea id="itemNote" placeholder="Note"></textarea>
+    <!-- Add Item -->
+    <section id="add" class="tab-content">
+      <h2>Add New Item</h2>
+      <div class="card">
+        <input type="file" id="itemImage" accept="image/*">
+        <input type="text" id="itemName" placeholder="Name">
+        <input type="text" id="itemLocation" placeholder="Where it’s kept">
+        <input type="text" id="itemNote" placeholder="Note">
         <button id="addItemBtn">Add Item</button>
       </div>
     </section>
 
-    <section id="settings" class="tab">
-      <h1>Settings</h1>
-      <div class="settings-container">
-        <button id="toggleTheme">Toggle Themes - Night🌙/Day ☀️</button>
-        <button id="exportData">Export Data</button>
-        <button id="importData">Import Data</button>
-        <div class="version">Version 1.0.0</div>
+    <!-- Settings -->
+    <section id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <div class="card">
+        <p id="themeToggle">Toggle Themes - Night 🌙 / Day ☀️</p>
+        <p>Version: 1.0.0</p>
       </div>
     </section>
 
-    <section id="about" class="tab">
-      <h1>About</h1>
-      <p>This app was made by Lishith, a 12 year old student, who used his creativity to make this app using AI.</p>
+    <!-- About -->
+    <section id="about" class="tab-content">
+      <h2>About</h2>
+      <p>This app was made by <strong>Lishith</strong>, a 12-year-old student, who used his creativity to make this app using AI.</p>
     </section>
   </main>
 
-  <div id="notification"></div>
-
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
