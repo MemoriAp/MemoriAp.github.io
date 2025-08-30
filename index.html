@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <button data-tab="home">Home</button>
+    <button data-tab="add">Add Item</button>
+    <button data-tab="settings">Settings</button>
+    <button data-tab="about">About</button>
+  </nav>
+
+  <main>
+    <section id="home" class="tab active">
+      <h1>Items</h1>
+      <div id="itemsList"></div>
+    </section>
+
+    <section id="add" class="tab">
+      <h1>Add New Item</h1>
+      <div class="form-container">
+        <input type="file" id="itemImage" accept="image/*" />
+        <input type="text" id="itemName" placeholder="Name" />
+        <input type="text" id="itemLocation" placeholder="Where it's kept" />
+        <textarea id="itemNote" placeholder="Note"></textarea>
+        <button id="addItemBtn">Add Item</button>
+      </div>
+    </section>
+
+    <section id="settings" class="tab">
+      <h1>Settings</h1>
+      <div class="settings-container">
+        <button id="toggleTheme">Toggle Themes - Night🌙/Day ☀️</button>
+        <button id="exportData">Export Data</button>
+        <button id="importData">Import Data</button>
+        <div class="version">Version 1.0.0</div>
+      </div>
+    </section>
+
+    <section id="about" class="tab">
+      <h1>About</h1>
+      <p>This app was made by Lishith, a 12 year old student, who used his creativity to make this app using AI.</p>
+    </section>
+  </main>
+
+  <div id="notification"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
