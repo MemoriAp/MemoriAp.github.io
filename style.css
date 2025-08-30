@@ -1,0 +1,131 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: #444;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+nav button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #666;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+nav button:hover {
+  background: #888;
+}
+
+.page {
+  display: none;
+  padding: 1rem;
+}
+
+.page.active {
+  display: block;
+}
+
+.input-box {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+}
+
+/* Add button */
+.add-btn {
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #0056b3;
+}
+
+/* Settings */
+.settings-option {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+}
+
+.settings-option button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+.settings-option button:hover {
+  background: #0056b3;
+}
+
+.version {
+  text-align: center;
+  color: gray;
+}
+
+/* Message (added/edited item) */
+.message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: none;
+}
+
+/* Light & Dark modes */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.light {
+  background: white;
+  color: black;
+}
+
+body.light header {
+  background: #ddd;
+}
+
+body.light nav button {
+  background: #ccc;
+  color: black;
+}
+
+body.light nav button:hover {
+  background: #aaa;
+}
